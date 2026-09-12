@@ -50,9 +50,9 @@ export default function Header() {
         // If the menu is open, force the header to be visible so the user can use the close button
         animate={(hidden && !isMenuOpen) ? 'hidden' : 'visible'}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 h-24 md:h-[100px] bg-black/40 backdrop-blur-md border-b border-white/10"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-8 h-24 md:h-[100px] bg-black/40 backdrop-blur-md border-b border-white/10"
       >
-        <div className="relative h-28 w-80 -ml-4">
+        <div className="relative h-20 w-48 md:h-28 md:w-80 -ml-2 md:-ml-4 shrink-0">
           <Image 
             src="/logo.svg" 
             alt="MI-REN Logo" 

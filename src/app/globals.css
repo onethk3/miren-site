@@ -27,7 +27,7 @@
 
 @layer components {
   .text-heading {
-    @apply text-5xl md:text-6xl font-light uppercase tracking-widest leading-tight;
+    @apply text-3xl sm:text-4xl md:text-6xl font-light uppercase tracking-wider md:tracking-widest leading-tight;
   }
   .text-body {
     @apply text-xl md:text-2xl font-light leading-relaxed text-white/80;
