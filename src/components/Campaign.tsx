@@ -9,9 +9,9 @@ export default function Campaign() {
     '/images/placeholder_image_compressed.webp',
     '/images/placeholder2.webp',
     '/images/placeholder3.webp',
-    '/images/campaign_placeholder_4_1789218606321.jpg',
-    '/images/campaign_placeholder_5_1789218621101.jpg',
-    '/images/campaign_placeholder_6_1789218636952.jpg'
+    '/images/campaign_placeholder_4.jpg',
+    '/images/campaign_placeholder_5.jpg',
+    '/images/campaign_placeholder_6.jpg'
   ];
   const containerRef = useRef<HTMLDivElement>(null);
 
