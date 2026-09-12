@@ -1,0 +1,42 @@
+import Image from 'next/image';
+
+export default function Footer() {
+  return (
+    <footer id="contact" className="px-8 py-16 bg-[#050505] text-white border-t border-white/10 text-center md:text-left">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-12 flex flex-col md:grid">
+        <div className="flex flex-col items-center md:items-start">
+          <div className="relative h-24 w-80 md:h-[200px] md:w-[500px] mb-6 md:-ml-6">
+            <Image 
+              src="/logo.svg" 
+              alt="MI-REN Logo" 
+              fill 
+              className="object-contain object-center md:object-left brightness-0 invert"
+            />
+          </div>
+          <p className="text-caption">
+            © {new Date().getFullYear()} MI-REN Official.<br />
+            All rights reserved.
+          </p>
+        </div>
+        
+        <div>
+          <h4 className="text-caption font-bold uppercase tracking-widest mb-6 !text-white/50">Contact</h4>
+          <ul className="space-y-4">
+            <li><a href="mailto:inquiries@mi-ren.com" className="text-caption !text-white/80 hover:!text-white transition-colors">inquiries@mi-ren.com</a></li>
+            <li><p className="text-caption !text-white/80">+1 (555) 123-4567</p></li>
+            <li><p className="text-caption !text-white/80">123 Fashion Avenue<br/>New York, NY 10001</p></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-caption font-bold uppercase tracking-widest mb-6 !text-white/50">Social</h4>
+          <div className="flex flex-col items-center md:items-start space-y-4 md:flex-row md:space-y-0 md:space-x-6">
+            <a href="#" className="text-caption tracking-widest uppercase !text-white/80 hover:!text-white transition-colors">
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

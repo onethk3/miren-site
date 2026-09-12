@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-muted: #111111;
+  --color-muted-foreground: #888888;
+}
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Shippori Mincho', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer components {
+  .text-heading {
+    @apply text-5xl md:text-6xl font-light uppercase tracking-widest leading-tight;
+  }
+  .text-body {
+    @apply text-xl md:text-2xl font-light leading-relaxed text-white/80;
+  }
+  .text-caption {
+    @apply text-base md:text-lg text-white/60;
+  }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Hide scrollbar for mobile native swipe */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Handle Framer Motion progress native calc interpolation for desktop */
+@media (min-width: 768px) {
+  .md-transform-only {
+    /* Translate track from 0% to -(100% of its width - bounded container width) */
+    transform: translateX(calc(var(--progress, 0) * (-100% + min(100vw, 80rem) - 4rem))) !important;
+  }
+}
+
+/* Prevent Framer Motion transform on mobile to allow native swipe */
+@media (max-width: 767px) {
+  .md-transform-only {
+    transform: none !important;
+  }
+}
