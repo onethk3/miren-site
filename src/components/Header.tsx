@@ -63,7 +63,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden lg:flex gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -81,7 +81,7 @@ export default function Header() {
 
         {/* Mobile Hamburger Toggle */}
         <button 
-          className="md:hidden relative z-50 p-2 flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none hover:opacity-70 transition-opacity duration-300"
+          className="lg:hidden relative z-50 p-2 flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none hover:opacity-70 transition-opacity duration-300"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
         >
@@ -109,7 +109,7 @@ export default function Header() {
           closed: { opacity: 0, pointerEvents: "none" }
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center md:hidden"
+        className="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center lg:hidden"
       >
         <nav className="flex flex-col gap-10 text-center">
           {navLinks.map((link, i) => (

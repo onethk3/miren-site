@@ -6,12 +6,15 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 export default function Campaign() {
   const images = [
-    '/images/placeholder_image_compressed.webp',
-    '/images/placeholder2.webp',
-    '/images/placeholder3.webp',
-    '/images/campaign_placeholder_4.jpg',
-    '/images/campaign_placeholder_5.jpg',
-    '/images/campaign_placeholder_6.jpg'
+    '/images/final/campaign_7.jpg',
+    '/images/final/campaign_1.jpg',
+    '/images/final/campaign_2.jpg',
+    '/images/final/campaign_8.jpg',
+    '/images/final/campaign_3.jpg',
+    '/images/final/campaign_4.jpg',
+    '/images/final/campaign_9.jpg',
+    '/images/final/campaign_5.jpg',
+    '/images/final/campaign_6.jpg'
   ];
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -38,20 +41,19 @@ export default function Campaign() {
 
   return (
     <section id="campaign" className="bg-black text-white w-full">
-      <div ref={containerRef} className="h-auto md:h-[300vh] w-full max-w-7xl mx-auto">
+      <div ref={containerRef} className="h-auto md:h-[300vh] w-full max-w-[90rem] mx-auto">
         <div className="md:sticky md:top-0 md:h-dvh md:flex md:flex-col md:justify-center overflow-hidden py-24 md:py-0">
-          
+
           <div className="px-8 w-full mb-12 md:mb-16 shrink-0">
             <h2 className="text-heading mb-6 md:mb-8">Campaign</h2>
-            <p className="text-body max-w-2xl">
-              Explore our latest collection, where timeless elegance meets modern design. 
-              A journey through high-end fashion crafted with precision and passion.
+            <p className="text-body max-w-4xl">
+              The collection explores tailored unisex suits that challenge traditional ideas of perfection and conventional tailoring. Through asymmetry, oversized silhouettes, raw edges and reconstructed details, imperfections are transformed into intentional design elements, encouraging the wearer to embrace individuality and self-expression.
             </p>
           </div>
 
           {/* Horizontal Track Container */}
           <div className="w-full">
-            <motion.div 
+            <motion.div
               className="flex gap-4 px-8 overflow-x-auto md:overflow-x-visible hide-scrollbar md:w-max md-transform-only snap-x snap-mandatory"
               style={{ '--progress': smoothProgress } as any}
             >
@@ -63,6 +65,7 @@ export default function Campaign() {
                     fill
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     sizes="(max-width: 768px) 85vw, 33vw"
+                    priority={i === 0}
                   />
                 </div>
               ))}

@@ -3,23 +3,23 @@ import Image from 'next/image';
 export default function About() {
   return (
     <section id="about" className="px-8 py-24 bg-black text-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-10 gap-12 items-center">
-          <div className="col-span-1 md:col-span-4 md:order-1 order-2">
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
+      <div className="max-w-[90rem] mx-auto">
+        <h2 className="text-heading mb-6 md:mb-12 text-left">About <span className="whitespace-nowrap">MI-Ren</span></h2>
+        <div className="grid grid-cols-1 min-[1350px]:grid-cols-12 gap-12 items-center">
+          <div className="col-span-1 min-[1350px]:col-span-7 order-1 min-[1350px]:order-2">
+            <div className="relative aspect-[4/3] min-[1350px]:aspect-[3/2] w-full max-w-3xl min-[1350px]:max-w-none overflow-hidden">
               <Image
-                src="/images/placeholder_image_compressed.webp"
+                src="/images/final/about_image.jpg"
                 alt="About MI-REN"
                 fill
                 className="object-cover"
                 priority
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 60vw"
               />
             </div>
           </div>
           
-          <div className="col-span-1 md:col-span-6 md:order-2 order-1 flex flex-col justify-center">
-            <h2 className="text-heading mb-8">About <span className="whitespace-nowrap">MI-Ren</span></h2>
+          <div className="col-span-1 min-[1350px]:col-span-5 order-2 min-[1350px]:order-1 flex flex-col justify-center min-[1350px]:pr-8">
             <p className="text-body mb-6">
               MiRen is a contemporary tailoring brand that challenges conventional ideas of perfection.
             </p>

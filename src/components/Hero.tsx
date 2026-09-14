@@ -24,7 +24,7 @@ export default function Hero() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/images/main_pic_compressed.webp"
+              src="/images/final/hero_image.jpg"
               alt="MI-REN High-end Fashion"
               fill
               className="object-cover"
