@@ -2,21 +2,22 @@
 
 import Image from 'next/image';
 import { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
+
+import c1 from '../../public/images/final/compressed/campaign_1.webp';
+import c2 from '../../public/images/final/compressed/campaign_2.webp';
+import c3 from '../../public/images/final/compressed/campaign_3.webp';
+import c4 from '../../public/images/final/compressed/campaign_4.webp';
+import c5 from '../../public/images/final/compressed/campaign_5.webp';
+import c6 from '../../public/images/final/compressed/campaign_6.webp';
+import c7 from '../../public/images/final/compressed/campaign_7.webp';
+import c8 from '../../public/images/final/compressed/campaign_8.webp';
+import c9 from '../../public/images/final/compressed/campaign_9.webp';
 
 export default function Campaign() {
-  const images = [
-    '/images/final/campaign_7.jpg',
-    '/images/final/campaign_1.jpg',
-    '/images/final/campaign_2.jpg',
-    '/images/final/campaign_8.jpg',
-    '/images/final/campaign_3.jpg',
-    '/images/final/campaign_4.jpg',
-    '/images/final/campaign_9.jpg',
-    '/images/final/campaign_5.jpg',
-    '/images/final/campaign_6.jpg'
-  ];
+  const images = [c7, c1, c2, c8, c3, c4, c9, c5, c6];
   const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { margin: "200px" });
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -59,14 +60,16 @@ export default function Campaign() {
             >
               {images.map((src, i) => (
                 <div key={i} className="relative shrink-0 w-[85vw] aspect-[4/5] md:w-auto md:h-[50vh] overflow-hidden group snap-center">
-                  <Image
-                    src={src}
-                    alt={`Campaign Image ${i + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    sizes="(max-width: 768px) 85vw, 33vw"
-                    priority={i === 0}
-                  />
+                  {isInView && (
+                    <Image
+                      src={src}
+                      placeholder="blur"
+                      alt={`Campaign Image ${i + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      sizes="(max-width: 768px) 85vw, 33vw"
+                    />
+                  )}
                 </div>
               ))}
             </motion.div>

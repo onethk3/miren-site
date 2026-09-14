@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import philosophyImg from '../../public/images/final/compressed/philosophy_image.webp';
 
 export default function Philosophy() {
   return (
@@ -10,7 +11,8 @@ export default function Philosophy() {
           <div className="col-span-1 min-[1350px]:col-span-7">
             <div className="relative aspect-[4/3] min-[1350px]:aspect-[3/2] w-full max-w-3xl min-[1350px]:max-w-none overflow-hidden">
               <Image
-                src="/images/final/philosophy_image.jpg"
+                src={philosophyImg}
+                placeholder="blur"
                 alt="Our Philosophy"
                 fill
                 className="object-cover"

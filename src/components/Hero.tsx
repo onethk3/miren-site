@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import heroImg from '../../public/images/final/compressed/hero_image.webp';
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +25,8 @@ export default function Hero() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/images/final/hero_image.jpg"
+              src={heroImg}
+              placeholder="blur"
               alt="MI-REN High-end Fashion"
               fill
               className="object-cover"

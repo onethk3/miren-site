@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import aboutImg from '../../public/images/final/compressed/about_image.webp';
 
 export default function About() {
   return (
@@ -9,7 +10,8 @@ export default function About() {
           <div className="col-span-1 min-[1350px]:col-span-7 order-1 min-[1350px]:order-2">
             <div className="relative aspect-[4/3] min-[1350px]:aspect-[3/2] w-full max-w-3xl min-[1350px]:max-w-none overflow-hidden">
               <Image
-                src="/images/final/about_image.jpg"
+                src={aboutImg}
+                placeholder="blur"
                 alt="About MI-REN"
                 fill
                 className="object-cover"

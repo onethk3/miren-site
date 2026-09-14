@@ -22,9 +22,9 @@ export default function Footer() {
         <div>
           <h4 className="text-caption font-bold uppercase tracking-widest mb-6 !text-white/50">Contact</h4>
           <ul className="space-y-4">
-            <li><a href="mailto:inquiries@mi-ren.com" className="text-caption !text-white/80 hover:!text-white transition-colors">inquiries@mi-ren.com</a></li>
-            <li><p className="text-caption !text-white/80">+1 (555) 123-4567</p></li>
-            <li><p className="text-caption !text-white/80">123 Fashion Avenue<br/>New York, NY 10001</p></li>
+            <li><a href="mailto:inquiries@miren.com" className="text-caption !text-white/80 hover:!text-white transition-colors">inquiries@miren.com</a></li>
+            <li><p className="text-caption !text-white/80">+94 77 600 0748</p></li>
+            <li><p className="text-caption !text-white/80">91, Colombo road,<br/>Negombo.</p></li>
           </ul>
         </div>
 

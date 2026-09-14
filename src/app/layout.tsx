@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import Preloader from "@/components/Preloader";
 
 export const metadata: Metadata = {
   title: "MI-Ren - Imperfection Redefined",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black text-white min-h-screen selection:bg-white selection:text-black">
+        <Preloader />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
